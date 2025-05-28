@@ -3,7 +3,6 @@ package com.arifng.springmongodb;
 import com.arifng.springmongodb.service.AuthorTemplateService;
 import com.arifng.springmongodb.service.AuthorTemplateServiceImpl;
 import com.mongodb.client.result.UpdateResult;
-import com.mongodb.internal.bulk.UpdateRequest;
 import net.bytebuddy.utility.RandomString;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +18,6 @@ import org.springframework.data.mongodb.core.query.Update;
 import java.util.List;
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.instancio.Select.field;
 
