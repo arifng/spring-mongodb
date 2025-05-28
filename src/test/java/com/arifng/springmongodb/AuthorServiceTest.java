@@ -5,6 +5,7 @@ import com.arifng.springmongodb.service.AuthorService;
 import com.arifng.springmongodb.service.AuthorServiceImpl;
 import net.bytebuddy.utility.RandomString;
 import org.instancio.Instancio;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,11 @@ public class AuthorServiceTest {
     @BeforeEach
     void setup() {
         authorService = new AuthorServiceImpl(authorRepository);
+    }
+
+    @AfterEach
+    void tearDown() {
+        authorRepository.deleteAll();
     }
 
     @Test
